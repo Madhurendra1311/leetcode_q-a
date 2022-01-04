@@ -36,13 +36,6 @@
 // Accepted
 
 
-
-
-/**
- * @param {number[]} nums
- * @param {number} target
- * @return {number[]}
- */
  var twoSum = function(nums, target) {
     let indexes = []
     for(let i = 0; i < nums.length; i++){
