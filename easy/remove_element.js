@@ -47,7 +47,8 @@
 // 0 <= nums[i] <= 50
 // 0 <= val <= 100
 
-// complexity: O(1)
+// space complexity: O(1)
+// time complexity: O(n)
 
 
 /**

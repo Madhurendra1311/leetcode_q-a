@@ -43,7 +43,8 @@
 // -100 <= nums[i] <= 100
 // nums is sorted in non-decreasing order.
 
-// complexity: O(1)
+// space complexity: O(1)
+// time complexity: O(n)
 
 /**
  * @param {number[]} nums
