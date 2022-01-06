@@ -47,7 +47,7 @@
 // 0 <= nums[i] <= 50
 // 0 <= val <= 100
 
-
+// complexity: O(1)
 
 
 /**
@@ -64,4 +64,19 @@
         }
     }
     return count
+};
+
+
+
+// show in array:
+complexity: O(n)
+
+var removeElement = function(nums, val) {
+    let temp = []
+    for(let i = 0; i < nums.length; i++){
+        if(nums[i] != val){
+            temp.push(nums[i])
+        }
+    }
+    return temp
 };
