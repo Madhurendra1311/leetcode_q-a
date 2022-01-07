@@ -88,3 +88,30 @@ var isValid = function (s) {
     }
     return stack.length? false : true;
 };
+
+// method3
+
+/**
+ * @param {string} s
+ * @return {boolean}
+ */
+ var isValid = function(s) {
+    if (s.length <=1) {
+        return false
+    }
+    let stack = []
+    let hash = {
+        '(' : ')',
+        '[' : ']',
+        '{' : '}'
+    }
+    for(let i = 0; i < s.length; i++){
+        if (hash[s[i]]){
+            stack.push(hash[s[i]])
+        }
+        else if (s[i] !== stack.pop()){
+            return false
+        }
+    }
+    return !stack.length
+};
