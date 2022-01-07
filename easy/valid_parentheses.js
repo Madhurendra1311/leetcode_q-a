@@ -63,3 +63,28 @@ var isValid = function (s) {
         return false
     }
 };
+
+
+// method2
+
+
+/**
+ * @param {string} s
+ * @return {boolean}
+ */
+ var isValid = function(s) {
+    let stack = [];
+    let stringArray = s.split('')
+    
+    for (let i = 0; i < stringArray.length; i++) {
+        if (stringArray[i] === ')' && stack[stack.length-1] === '(' ||
+            stringArray[i] === '}' && stack[stack.length-1] === '{' ||
+            stringArray[i] === ']' && stack[stack.length-1] === '[') {
+            stack.pop()
+        }
+        else {
+            stack.push(stringArray[i])
+        }
+    }
+    return stack.length? false : true;
+};
