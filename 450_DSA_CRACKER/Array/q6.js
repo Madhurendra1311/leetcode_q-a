@@ -23,6 +23,7 @@ const printUnion = (arr1, arr2) => {
             j++;
         }
         else {
+            // Both equal, print anyone and increment both indexes
             temp.push(arr2[j])
             j++;
             i++;
