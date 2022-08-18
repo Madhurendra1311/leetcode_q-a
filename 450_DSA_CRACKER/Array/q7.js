@@ -40,7 +40,7 @@ const rotateArray = (arr) => {
         arr[j] = temp;
         i++;
     }
-    return arr;
+    // return arr;
 }
 
 let array = [1, 2, 3, 4, 5]
