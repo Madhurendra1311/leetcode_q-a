@@ -1,4 +1,5 @@
 // Kadane's Algorithm
+// Maximum Subarray
 // link: https://practice.geeksforgeeks.org/problems/kadanes-algorithm-1587115620/1
 
 // Kadane's Algorithm
@@ -15,3 +16,6 @@ var maxSubArray = function(nums) {
     }
     return maxSub;
 };
+
+let res = maxSubArray([-2,1,-3,4,-1,2,1,-5,4])
+console.log(res)
