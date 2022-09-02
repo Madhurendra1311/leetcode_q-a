@@ -2,6 +2,14 @@
 
 // link: https://leetcode.com/problems/next-permutation/
 
+// Approach:
+
+// step1: find the first decending number from the end. Store number in index.
+// step2: If we don't find the index then there is no permutation possible for the current number. So we return the first permutation. To do that we need to return reversed array.
+// Step 3: If we got the index, Then we need to find the second index. Second index is basically the index which has value greater then the first index value from back. Store the second index value.
+// Step 4: Swap index and second index value.
+// Step 5: reverse all the array items after the index value. We are doing this bacause we need to find the minimum permutation value after the array index.
+
 var nextPermutation = function(nums) {
     const len=nums.length-1;
     //stores the first index and second index for swapping.
