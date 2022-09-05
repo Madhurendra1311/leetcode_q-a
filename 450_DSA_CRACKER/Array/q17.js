@@ -22,3 +22,31 @@ const countPairSum = (arr, k) => {
 
 let res = countPairSum([1, 5, 7, 1], 6)
 console.log(res);
+
+var maxOperations = function(nums, k) {
+    // two pointer
+    // 3,1,3,4,3
+    nums.sort((a,b) => a-b)
+    let i = 0;
+    let j = nums.length - 1;
+    let count = 0;
+    while(i<j) {
+        let sum = nums[i]+nums[j]
+        if(sum === k) {
+            i++;
+            j--;
+            count++;
+        } else if(sum < k) {
+            i++;
+        }else {
+            j--;
+        }
+    }
+    return count;
+};
+
+let result = maxOperations([3,1,3,4,3], 6)
+console.log(result);
+
+// Time complexity: O(n)
+// space complexity: O(1)

@@ -60,3 +60,44 @@ console.log(res);
 // If the array is sorted in decreasing order, simply sort it in ascending order, since no greater permutation would be possible for such an array.
 // What is the approach to solve the Next Permutation problem?
 // The idea is to find the longest non-increasing suffix and swap it with the pivot element found. Pivot element is the index where A[i] < A[i + 1]. At last reversing the suffix, gives us the next greater permutation.
+
+
+var nextPermutations = (nums) => {
+    for(let i = nums.length-1; i >= 0; i--) {
+        if(nums[i] < nums[i+1]) {
+            const large = nextLarge(i);
+            swap(i, large);
+            reverse(i+1);
+            return;
+        }
+    }
+	
+	// If there is no next permutation reverse the arr
+    nums.reverse()
+    
+    function swap(i, j) {
+        [nums[i], nums[j]] = [nums[j], nums[i]];
+    }
+    
+    function reverse(idx) {
+        let start = idx, end = nums.length-1;
+        
+        while(start < end) {
+            swap(start, end);
+            start++;
+            end--;
+        }
+    }
+    
+    function nextLarge(idx) {
+        for(let i = nums.length-1; i > idx; i--) {
+            if(nums[i] > nums[idx]) return i;
+        }
+    }
+
+    return nums;
+};
+
+
+let result = nextPermutations([1,2,3]);
+console.log(result);
