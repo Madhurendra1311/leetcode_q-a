@@ -68,7 +68,7 @@ var nextPermutations = (nums) => {
             const large = nextLarge(i);
             swap(i, large);
             reverse(i+1);
-            return;
+            return nums;
         }
     }
 	
