@@ -12,11 +12,18 @@ const isSubset = (arr1, arr2) => {
             if(arr1[i] === arr2[j]) {
                 break;
             }
+            /* If the above inner loop
+            was not broken at all then
+            arr2[i] is not present in
+            arr1[] */
             if(j === arr2.length) {
                 return false;
             }
         }
     }
+    /* If we reach here then all
+        elements of arr2[] are present
+        in arr1[] */
     return true;
 }
 
