@@ -14,6 +14,7 @@ const allCharCount = (str) => {
 			}else {
 				obj[str[i]] = 1;
 			}
+            // console.log(obj);
 		}
 		return obj;
 	}
