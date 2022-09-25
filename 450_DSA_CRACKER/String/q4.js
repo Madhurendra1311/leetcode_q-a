@@ -31,11 +31,11 @@ const check_rotation = (s, goal) => {
     let k = goal.length
     while (k--){
         let ch = q2[0]
-        console.log(ch, '34');
+        // console.log(ch, '34');
         q2.shift()
-        console.log(q2, '36');
+        // console.log(q2, '36');
         q2.push(ch)
-        console.log(q2, '38');
+        // console.log(q2, '38');
         if (JSON.stringify(q2) == JSON.stringify(q1)) {
             return true
         }
