@@ -11,3 +11,22 @@ const getDuplicate = (str) => {
   
   let Sentence = "Ravi had been saying that he had been there";
   console.log(getDuplicate(Sentence))
+
+
+  const wordRepeat = (str) => {
+    let splitStr = str.split(' ');
+    let list = [];
+  
+    for (let i = 0; i < splitStr.length; i++) {
+      for (let j = i + 1; j < splitStr.length; j++) {
+        if (splitStr[i] === (splitStr[j])) {
+          //repeat = splitStr[i];
+          list.push(splitStr[i]);
+        }
+      }
+    }
+    //console.log(list);
+    return list[0];
+  }
+  
+  console.log(wordRepeat(Sentence));
