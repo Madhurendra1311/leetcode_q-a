@@ -1,6 +1,9 @@
 // Minimum characters to be added at front to make string palindrome
 // link: https://www.geeksforgeeks.org/minimum-characters-added-front-make-string-palindrome/
 
+// Approach:
+// Start checking the string each time if it is a palindrome and if not, then delete the last character and check again.When the string gets reduced to either a palindrome or an empty string then the number of characters deleted from the end till now will be the answer as those characters could have been inserted at the beginning of the original string in the order which will make the string a palindrome.
+
 
 const isPalindrome = (string) => {
 
