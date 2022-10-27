@@ -27,3 +27,19 @@ const removeDuplicates = (s) => {
 
 let result = removeDuplicates('aabb')
 console.log(result);
+
+
+function removeConsecutiveDuplicates(input) {
+    if(input.length<=1) {
+        return input;
+    }
+    if(input[0]==input[1]) {
+        return removeConsecutiveDuplicates(input.substring(1));
+    }
+    else {
+        return input[0] + removeConsecutiveDuplicates(input.substring(1));
+    }
+}
+
+let result1 = removeConsecutiveDuplicates('aabb')
+console.log(result1);
