@@ -21,7 +21,7 @@ const lengthOfLongestSubstring = (str) => {
         //calculate the length of the current substring and update maxlength if necessary
         maxLength = Math.max(maxLength, end - start + 1)
     }
-    //Return the length of the longest substring without repeating character
+    //Return the length of the longest substring without repeating charact er
     return maxLength;
 }
 
